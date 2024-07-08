@@ -2,6 +2,58 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Dependencies
+
+- **React**: JavaScript library for building user interfaces
+- **Redux Toolkit**: Official Redux package for efficient Redux development
+- **Redux Persis**:Redux Persist allows you to persist the Redux store's state to storage (like localStorage, sessionStorage, or async storage in React Native).
+- **React Bootstrap**: Bootstrap components built for React
+- **React Router DOM**: Declarative routing for React applications
+- **Formik**: Form library for React forms management
+- **Yup**: JavaScript schema builder for value parsing and validation
+
+## Usage
+
+### Redux Toolkit
+
+Redux Toolkit is used for state management in this project. It simplifies the Redux workflow and includes utilities like `createSlice` for defining Redux state and reducers.
+
+npm install @reduxjs/toolkit
+
+
+### React Bootstrap
+
+React Bootstrap provides Bootstrap components such as forms, buttons, modals, etc., designed for React applications.
+
+npm install react-bootstrap bootstrap
+
+
+### React Router DOM
+
+React Router DOM is used for declarative routing in the application, allowing navigation between different pages/components.
+
+npm install react-router-dom
+
+
+### Formik and Yup
+
+Formik is used for managing forms in React, providing utilities for form validation, handling form submission, and managing form state. Yup is used for schema validation with Formik, defining validation rules for form fields.
+
+npm install formik
+
+npm install yup
+
+
+## Contributing
+
+Contributions are welcome. Feel free to fork the repository and submit pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
 ## Available Scripts
 
 In the project directory, you can run:

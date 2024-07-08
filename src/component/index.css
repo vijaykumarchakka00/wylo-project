@@ -1,0 +1,18 @@
+.ellipsis-hor {
+    overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+.ellipsis-var {
+    display: -webkit-box;max-width: 100%;margin: 0;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;
+}
+.ellipsis-col-1 {
+    -webkit-line-clamp: 1;
+}
+.ellipsis-col-2 {
+    -webkit-line-clamp: 2;
+}
+.ellipsis-col-3 {
+    -webkit-line-clamp: 3;
+}
+.ellipsis-col-4 {
+    -webkit-line-clamp: 4;
+}
