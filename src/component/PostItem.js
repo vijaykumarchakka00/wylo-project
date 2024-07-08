@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -8,9 +9,8 @@ import {
   Form,
   Alert,
 } from "react-bootstrap";
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateFormDataReducer } from "./redux/FormSclice";
+import { updateFormDataReducer, deleteFormDataReducer } from "./redux/FormSclice"; // Import delete action
 import { useNavigate } from "react-router-dom";
 import './index.css';
 
@@ -52,6 +52,12 @@ function PostItem() {
     setTimeout(() => setShowSuccessMessage(false), 3000); // Hide the message after 3 seconds
   };
 
+  const handleDelete = (index) => {
+    dispatch(deleteFormDataReducer(index));
+    setShowSuccessMessage(true);
+    setTimeout(() => setShowSuccessMessage(false), 3000); // Hide the message after 3 seconds
+  };
+
   const navigate = useNavigate();
   const CreateButton = () => {
     navigate("/CreateBlog");
@@ -61,7 +67,7 @@ function PostItem() {
     <Container>
       {showSuccessMessage && (
         <Alert variant="success" onClose={() => setShowSuccessMessage(false)} dismissible>
-          Post updated successfully!
+          Action successful!
         </Alert>
       )}
       {FormDataValues && FormDataValues.length > 0 ? (
@@ -76,6 +82,13 @@ function PostItem() {
                     onClick={() => handleShow(index)}
                   >
                     Edit
+                  </Button>
+                  <Button
+                    variant="outline-danger"
+                    className="rounded-5 fs-6 ms-2"
+                    onClick={() => handleDelete(index)}
+                  >
+                    Delete
                   </Button>
                   <h4 className="border-bottom m-0 py-1 ellipsis-col-2 ellipsis-var text-capitalize text-info-emphasis">
                     {each.Title}
