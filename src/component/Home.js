@@ -13,6 +13,10 @@ const Home = () => {
   const goToViewBlogs = () => {
     navigate("/postdisplay");
   };
+  const goToLogOut = () =>{
+    localStorage.clear()
+    window.location.reload()
+  }
   return (
 
     <Container className="d-flex justify-content-center align-items-center vh-100">
@@ -24,6 +28,9 @@ const Home = () => {
           </Button>
           <Button variant="success" onClick={goToViewBlogs} className="m-2 py-md-3 px-md-5 rounded-5">
             View All Blogs
+          </Button>
+          <Button variant="outline-warning" onClick={goToLogOut} className="m-2 py-md-3 px-md-5 rounded-5">
+            Log Out
           </Button>
         </Col>
       </Row>

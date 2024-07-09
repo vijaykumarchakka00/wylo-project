@@ -10,11 +10,12 @@ import PostDisplay from "./component/PostDisplay";
 import { store, persistor } from "./component/redux/Store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import SignIn from "./component/SignIn";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <SignIn/>,
     children: [
       {
         index: true,
